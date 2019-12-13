@@ -16,6 +16,7 @@ def git_commit():
 	repo.index.commit('noonce' + COMMIT_MESSAGE)
 	print(repo.head.object.hexsha)
 	comm = Commit(repo, repo.head.object.binsha, message = 'hello')
+	repo.commit(comm)
 	#for x in range(0, 100000):
 	    #try:
 	print(comm.hexsha)
